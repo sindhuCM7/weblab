@@ -1,0 +1,30 @@
+<html>
+<body>
+<script type="text/javascript">
+var str =prompt("Enter the input"," ");
+if(isNaN(str))
+{
+
+for(var i = 0; i < str.length; i++) {
+var chr =str.charAt(i);
+if(str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U' || chr == 'a' || chr == 'e' ||  chr == 'i' || chr == 'o' || chr == 'u')break;
+}
+if ( i < str.length ) 
+alert("The position of the left most vowel is "+(i+1)+"  character is "+chr);
+else
+alert("No vowel found in the entered string");
+}
+else
+{
+var num,rev=0,remainder;
+num = parseInt(str);
+while(num!=0) {
+remainder = num%10;
+num = parseInt(num/10);
+rev = rev * 10 + remainder;
+}
+alert("Reversal of "+str+"is  "+rev);
+}
+</script>
+</body>
+</html>
